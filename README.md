@@ -42,7 +42,9 @@ function CONFIG(v) {
 }
  ```
 
+
     -  Además, crea otro archivo llamado Config.html dentro de src/helpers con el siguiente contenido:
+
 
 ```bash
 <script>
