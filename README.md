@@ -43,12 +43,12 @@ function CONFIG(v) {
  ```
 
 
-     -  Además, crea otro archivo llamado Config.html dentro de src/helpers con el siguiente contenido:
+    -  Además, crea otro archivo llamado Config.html dentro de src/helpers con el siguiente contenido:
 
 
 ```bash
 <script>
-  const URL_APP_MANAGER = "AQUI LA URL DEL HOME A DONDE QUIERES QUE TE REDIRIJA SI ES Q EL LOGIN TE AUTENTICA"; 
+  const URL_APP_MANAGER = "AQUI_ VA_LA_URL_DEL_ HOME_A_DONDE_QUIERES_QUE_TE_REDIRIJA_EN_CASO_SE_VALIDEN_CORRECTAMENTE_LAS_CREDENCIALES_DEL_USUARIO"; 
 </script>
 ```
 
