@@ -1,6 +1,6 @@
 # Login en AppScript con CLASP
 
-Este repositorio contiene un proyecto de Login desarrollado en Google Apps Script, utilizando CLASP para trabajar con más comodidad desde tu editor de texto preferido utilizando Node.js. El login valida las credenciales del usuario y lo redirige a otra URL de tu elección (que claramente tendrás que configurar... podrá ser el home de tu aplicación), además de enviar algunas variables como parámetros en la solicitud HTTP.
+Este repositorio contiene un proyecto de Login desarrollado en Google Apps Script, utilizando CLASP para trabajar con más comodidad desde tu editor de texto preferido utilizando Node.js. El login valida las credenciales del usuario y lo redirige a otra URL de tu elección (que claramente tendrás que configurar... podrá ser el home de tu aplicación), además de enviar algunas variables como parámetros en la solicitud HTTP.  Además contiene funciones de cambio de contraseña previa validación de las credenciales.
 
 ![login](https://github.com/coliveramispireta/assets-images/blob/main/login.PNG)
 
