@@ -23,7 +23,7 @@ Este repositorio contiene un proyecto de Login desarrollado en Google Apps Scrip
 
 3. **Configuración de Variables:**
 
-     -  Crea un archivo en la raíz llamado "Config.js" con el siguiente contenido:
+      -  Crea un archivo en la raíz llamado "Config.js" con el siguiente contenido:
 
  ```bash
 function CONFIG(v) {
