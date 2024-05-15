@@ -15,7 +15,7 @@ Este repositorio contiene un proyecto de Login desarrollado en Google Apps Scrip
 
 2. **Configuración del Proyecto:**
 
-   Luego de clonar el repo, entra al editor de texto (yo uso VSC) y desde la terminal en la carpeta raiz dejecuta el siguiente comando para instalar las dependencias necesarias:
+   Luego de clonar el repo, entra al editor de texto (yo uso VSC) y desde la terminal en la carpeta raiz, ejecuta el siguiente comando para instalar las dependencias necesarias:
 
    ```bash
    npm install
