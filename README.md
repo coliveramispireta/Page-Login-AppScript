@@ -74,15 +74,20 @@ npx clasp login
 npx clasp create
 ```
 
+**Nota: no olvides pushear cada vez que hagas un cambio**
+```bash
+npx clasp push
+```
+
 Luego, busca el archivo en Google Apps Script desde tu cuenta de Google logueada.
 
 
 ## Ejecución
 
-Una vez configurado el proyecto y creado en Google Apps Script, podrás ejecutar el login y gestionar las vistas desde tu aplicación manager.
-El Jsvascript del proyecto se encargará de validar los datos del usuario registrado en la base de spreadsheet y de ser validados te redirigirá a la url de tu eleccion (tu app Home). Además contiene funciones de cambio de contraseña previa validación de las credenciales. 
+Recuerda implemetar el proyecto Como "Aplicativo Web" desde Google App Script". Una vez configurado el proyecto y creado en Google Apps Script, podrás ejecutar el login desde el URL proporcionado por GAS y gestionar las vistas desde tu aplicación manager. 
+El Jasvascript del proyecto se encargará de validar los datos del usuario registrado en la base de spreadsheet y de ser validados te redirigirá a la url de tu eleccion (tu app Home). Además contiene funciones de cambio de contraseña previa validación de las credenciales. 
 
-Para más detalles sobre el desarrollo y la gestión del proyecto, consulta la documentación proporcionada en cada paso.
+Espero te sirva y te guste!!
 
 Hecho con ❤️ por [Carlos Olivera](https://github.com/coliveramispireta)
 
