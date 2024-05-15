@@ -1,0 +1,41 @@
+<div id="login" text-align="center" class="col-md-6 login">
+  <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" style="color:#616468 "
+    class="bi bi-person-fill" viewBox="0 0 16 16">
+    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+  </svg><span style="font-size: 30px; color:#616468">ACCESO</span>
+  <p style="font-size: 15px; color: #9da7b4; margin-top: 1%">Accede al aplicativo web de gestión del ROM</p>
+  <form style="margin-top: -3%" class="formUser" name="userLogin" id="userLogin" onsubmit="enviarFormulario(this)">
+    <div class="col-md-12">
+      <div class="input-group mb-3 w-60">
+        <span class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bk-fill-lock" viewBox="0 0 16 16"></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bk-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                        </svg>
+                </span>
+        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario*" required>
+      </div>
+    </div>
+    <div style="margin-top: -0.5%" class="col-md-12">
+      <div class="input-group mb-3 w-60">
+        <span class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                    </svg>
+                </span>
+        <input type="password" class="form-control" name="contrasena" id="contrasena" autocomplete="on" placeholder="**********" required>
+      </div>
+    </div>
+    <div style="margin-top: -0.5%" class="col-md-12 font">
+      <a href="#" data-bs-toggle="modal" data-bs-target="#modalOlvidoContra">¿Olvidó su contraseña?</a>
+      <span style="color:#0D6EFD">&nbsp/&nbsp</span>
+      <a id="abrirModalCambioContra" href="#" data-bs-toggle="modal" data-bs-target="#modalCambioContra">Cambiar
+        contraseña</a>
+    </div>
+    <div style="margin-top: 1%" class="col-md-12">
+      <div class="d-grid gap-2  col-6 mx-auto">
+        <button type="submit" class="btn btn-outline-primary" id="submitButton" href="">Iniciar Sesión</button>
+      </div>
+    </div>
+  </form>
+</div>

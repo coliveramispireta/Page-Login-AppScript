@@ -1,0 +1,124 @@
+<script>
+
+    function enviarFormulario(form){
+      event.preventDefault();
+      var button = document.getElementById("submitButton");
+      button.disabled = true;
+      google.script.run
+      .withSuccessHandler(muestraHome)
+      .withFailureHandler(muestraError)
+      .verificarPassword(form)
+    }
+
+      function muestraHome(usuario){
+  const url = URL_APP_MANAGER;
+  // console.log(usuario);  
+  // console.log("El usuario es: ", usuario.user);
+  // console.log("El nombre del usuario es: ", usuario.nombre);
+  // console.log("El cargo del usuario es: ", usuario.cargo);
+  // console.log("El rol del usuario es: ", usuario.rol);
+  // console.log("La sede del usuario es: ", usuario.sede);
+  // console.log("La contraseña del usuario es: ", usuario.contrasena);
+  // console.log("El parámetro es: ", usuario.parametro);
+  const button = document.getElementById("submitButton");
+  button.disabled = false;
+
+if (usuario.contrasena === 123456){
+cambioPasswordDefault(usuario.user, usuario.nombre, usuario.sede, usuario.rol, url, usuario.parametro);
+} else {
+ 
+ parent.postMessage('Hola, mundo!');
+  
+    Swal.fire({
+  title: "¡Bienvenido!",
+  icon: "success",
+  showConfirmButton: false,
+   html: `
+    <h5>${usuario.nombre}</h5>
+    <p>${usuario.rol} - ${usuario.sede}</p>
+    </br>
+    <a type="button" class="btn btn-outline-primary" id="submitButton" href="${url}&u=${usuario.parametro}">Acceder a la plataforma</a></br>
+  `,
+
+ });
+ }
+}
+
+
+
+function cambioPasswordDefault(user, nombre, sede, rol, url, parametro){
+  Swal.fire({
+  title: "Primero debes cambiar de contraseña",
+  input: "password",
+  inputAttributes: {
+    autocapitalize: "off"
+  },
+  showCancelButton: true,
+  confirmButtonText: "Cambiar",
+  showLoaderOnConfirm: true,
+  preConfirm: async (contrasena) => {
+    return new Promise((resolve, reject) => {
+      google.script.run
+        .withSuccessHandler(() => resolve(true))
+        .withFailureHandler((error) => Swal.showValidationMessage(`Error al cambiar la contraseña: ${error}`))
+        .cambiarPassword(user, contrasena);
+    });
+  },
+  allowOutsideClick: () => !Swal.isLoading()
+}).then((result) => {
+  if (result.isConfirmed) {
+  registroDeCorreoElectronico(user, nombre, sede, rol, url, parametro);
+  }
+});
+}
+
+function registroDeCorreoElectronico(user, nombre, sede, rol, url, parametro){
+  Swal.fire({
+  title: "Contraseña cambiada correctamente!",
+  text: "Ahora, por favor registra tu email!",
+  input: "email",
+  inputAttributes: {
+    autocapitalize: "off"
+  },
+  showCancelButton: true,
+  confirmButtonText: "Cambiar",
+  showLoaderOnConfirm: true,
+  preConfirm: async (correo) => {
+    return new Promise((resolve, reject) => {
+      google.script.run
+        .withSuccessHandler(() => resolve(true))
+        .withFailureHandler((error) => Swal.showValidationMessage(`Error al registrar su email: ${error}`))
+        .registrarCorreo(user, correo);
+    });
+  },
+  allowOutsideClick: () => !Swal.isLoading()
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: "Email registrado correctamente!",
+      icon: "success",
+      showConfirmButton: false,
+   html: `
+   <h3>¡Bienvenido!</h3>
+    <h5>${nombre}</h5>
+    <p>${rol} - ${sede}</p>
+    </br>
+    <a type="button" class="btn btn-outline-primary" id="submitButton" href="${url}?u=${parametro}">Acceder a la plataforma</a></br>`
+    });
+  }
+});
+  
+}
+
+    function muestraError(error){
+  console.log("acceso denegado: ", error);
+     const button = document.getElementById("submitButton");
+     button.disabled = false;
+
+  Swal.fire({
+  title: "Acceso denegado!",
+  text: "El password es incorrecto o su acceso no está autorizado! Pongase en contacto con el administrador del sistema.",
+  icon: "error"
+});
+     }
+</script>

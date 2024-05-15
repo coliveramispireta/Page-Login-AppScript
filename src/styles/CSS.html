@@ -1,0 +1,541 @@
+<style> 
+@media screen and (max-width: 800px) {
+  .noVisibleEnMovil {
+    display: none;
+  }
+}
+
+
+  .list-group-item {
+      background-color: transparent !important;
+    }
+
+    .list-group-item:hover {
+      background-color: #9da7b4 !important;
+      color: #FFFFFF;
+    }
+
+    .lead {
+      zoom: 120%
+    }
+
+ .card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 10px; /* Ajusta este valor según sea necesario */
+    border-radius: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), transparent);
+}
+
+
+.cardBody{
+background-color: transparent !important
+}
+
+.cardTitle{
+text-align: center;
+}
+
+        .card:hover {
+            transform: scale(1.07);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+
+#opciones option {
+    min-width: 200px; /* Ancho mínimo de las opciones */
+    max-width: 400px; /* Ancho máximo de las opciones */
+}
+
+.inactive-link {
+  pointer-events: none;
+  cursor: default;
+}
+
+
+ .hidden-password {
+        -webkit-text-security: disc;
+        -moz-text-security: disc;
+        -ms-text-security: disc;
+        text-security: disc;
+    }
+  
+.spinnerLoadSUB{
+    content: "";
+    position: fixed;
+    zoom: 500%;
+    opacity: 0.6;
+    margin-top: 10%;
+    margin-left: 32%;
+    z-index: 2;
+}
+
+.spinnerLoadSUB2{
+    content: "";
+    position: fixed;
+    zoom: 400%;
+    opacity: 0.6;
+    margin-top: -6%;
+    margin-left: 37%;
+    z-index: 2;
+}
+
+  body:before {
+    margin-top: 4%;
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 110vh;
+    background-image: url(https://raw.githubusercontent.com/coliveramispireta/imagenes/main/InsMarcadeagua.png);
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+ }
+
+.totalesRechazos{
+    margin-bottom: 6%;
+    margin-top: 2%;
+    text-align: center;
+    color: #E33D30;
+}
+
+.totalesConformes{
+    margin-bottom: 6%;
+    margin-top: 2%;
+    text-align: center;
+    color: #0F9D58;  
+}
+
+
+.textRechazos_totales{
+text-align: center;
+font-weight: bold;
+font-size: 200%;
+color: #E33D30;
+}
+
+.textConformes_totales{
+text-align: center;
+font-weight: bold;
+font-size: 200%;
+color: #0F9D58;
+}
+
+
+
+ .imagenRechazo{
+    content: "";
+    position: absolute;
+    margin-top: -1.5%;
+     margin-left: 30%;
+    opacity: 0.7;
+    z-index: -1;  
+    }
+
+.imagen:hover{
+border-radius:50%;
+-webkit-border-radius:50%;
+
+
+transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+transition:all .5s ease-in-out;
+}
+
+
+
+.form-date__input {
+background-color: transparent; 
+border-color: transparent;
+margin-left: 15%;
+}
+
+.form-date__input2 {
+background-color: transparent; 
+border-color: transparent;
+margin-left: 2%;
+}
+
+aside{
+
+  margin-top: -6%;
+  margin-bottom: -20%;
+  margin-left: 0%;
+  background-image: url(https://i0.wp.com/calmatters.org/wp-content/uploads/2021/08/iStock_Lambda_01.jpg?fit=1200%2C798&ssl=1);
+  position: fixed;
+  opacity: 0.8;
+  background-repeat: repeat; 
+  z-index: -1;
+  width:14%;
+  height: 110%;
+  filter: sepia(20%);
+  zoom: 120%;
+  
+}
+
+#imageDerecha{
+
+  margin-top: -2em;
+  margin-bottom: 0em;
+  margin-left: 98em;
+  margin-right: 0em;
+  width: 420px; 
+  height: 562.077px; 
+  transform: scaleX(-1);
+  content: "";
+  z-index: -1;
+  position: fixed;
+}
+
+#checkSubEnfermedad {
+margin-left:-1.5%;
+}
+
+#enfermedadesGrupales {
+margin-left:5%;
+}
+
+
+
+@media screen and (max-width: 1560px) {
+    .ocultar-div{
+        display:none;
+    }
+}
+
+body
+{
+   
+    padding-bottom: 3%;
+}
+
+#gradosC{
+  zoom:150%;
+}
+
+footer{
+    position: fixed;
+    display: inline-block;
+    bottom: 0;
+    width: 100%;
+    height: 4%;
+    background-color: #3B83BD;
+    font-size: 12px;
+    text-align: center;
+    content: "";
+    z-index: 6;
+}
+
+
+        .cerrarSS{
+          text-align:right; 
+          line-height: 0.5em;
+         }
+
+         .optionSub{
+          text-align:left;  
+         }
+         
+      #uActual {
+        text-align: right;
+        }
+
+        #texNav1 {
+        text-align: right;
+        }
+
+        
+
+        #Recepcion-page { text-indent: 1em; }
+        #Digitacion-page { text-indent: 1em; }
+        #Entrega-page { text-indent: 1em; }
+        #Rechazos-page { text-indent: 1em; }
+        #Consulta-page { text-indent: 1em; }
+
+  
+
+
+#AppRom {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrapper {
+  margin-top: 0%;
+  position: relative;
+  width: 100%;
+  height: 95vh; /* Ajuste de altura para que ocupe el 95% de la altura de la pantalla */
+  background-image: url('https://github.com/coliveramispireta/imagenes/blob/main/FONDObaCK.jpg?raw=true');
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 4em;
+  filter: brightness(1.1);
+}
+
+ .font{
+  font-size: 16px;
+ }
+
+ .myCentrate{
+  margin-top: -5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Esto establece la altura del contenedor al 100% de la altura de la ventana */
+}
+
+ .myCentratev2{
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Esto establece la altura del contenedor al 100% de la altura de la ventana */
+}
+
+
+.login{
+  background-color: white; 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+  transition: transform 0.9s;
+}
+ .login:hover {
+            transform: scale(1.07);
+        }
+
+
+
+/* ---------------- Title ---------------- */
+.titleFont{
+ font-size: 1.5em; 
+}
+
+#title {
+  font-family: Helvetica, Geneva, sans-serif; /* Any font would work, but SansSerif looks better */
+}
+#title:focus {
+  outline: none;
+}
+#title span {
+  vertical-align: middle;
+  line-height: 1.0em;
+  transition: font-size 5s cubic-bezier(0, 1, 0, 1);
+}
+#title span:hover {
+  font-size: 2.0em; /* This adds a hover effect */
+  transition: font-size 10s cubic-bezier(0, 1, 0, 1);
+}
+
+#formularios {
+  zoom: 80%;
+}
+
+
+/* Below just some styling for the meta info */
+
+#meta {
+  color: #777;
+}
+  
+
+
+#titulos{
+    margin-bottom: 6%;
+    margin-top: 2%;
+    text-align: center;
+    color: #0062cc;
+}
+#subTitulos{
+    text-align: center;
+    color: #0062cc;
+    font-style: oblique;
+}
+
+
+
+
+.contact-form .form-control{
+    border-radius:0.5rem;
+}
+
+#prueba2{
+    padding: 2%;
+}
+
+.caja { 
+font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+color: #FFFFFF; 
+font-size: 18px; 
+font-weight: 400; 
+text-align: center; 
+background: #515151; 
+margin: 30%; 
+margin-top: 0%;
+overflow: hidden; 
+padding: 20px; 
+border-radius: 65px 0px 65px 0px; 
+-moz-border-radius: 65px 0px 65px 0px; 
+-webkit-border-radius: 65px 0px 65px 0px; 
+}
+
+</style>
+
+
+
+<style>
+
+
+
+.stepper-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+}
+
+.stepper-item.active {
+  font-weight: bold;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: #4bb543;
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #4bb543;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.imagen-parpadeante {
+  animation: parpadeo 0.5s infinite; /* La animación dura 0.5 segundos y se repite infinitamente */
+}
+
+
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #286c99;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#modalOlvidoContra #modalCambioContra{
+  font: 10px;
+}
+
+
+
+
+
+
+</style>
